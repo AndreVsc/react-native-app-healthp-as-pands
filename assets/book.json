@@ -1,0 +1,73 @@
+[
+    {
+      "id": 1,
+      "nome": "The Little Prince",
+      "anoDeLancamento": 1943,
+      "resumo": "A poetic and philosophical tale about a young prince who travels from planet to planet, learning profound lessons about love, responsibility, and the essence of human nature, through encounters with various inhabitants.",
+      "autor": "Antoine de Saint-Exupéry"
+    },
+    {
+      "id": 2,
+      "nome": "Charlotte's Web",
+      "anoDeLancamento": 1952,
+      "resumo": "The story of a pig named Wilbur, who is saved from being slaughtered by a clever spider named Charlotte. Through her web, she writes messages to persuade the farmer to let Wilbur live, showcasing friendship and sacrifice.",
+      "autor": "E.B. White"
+    },
+    {
+      "id": 3,
+      "nome": "Goodnight Moon",
+      "anoDeLancamento": 1947,
+      "resumo": "A classic bedtime story featuring a bunny saying goodnight to various objects in his room. The rhythmic and soothing narrative helps create a calm atmosphere perfect for bedtime routines.",
+      "autor": "Margaret Wise Brown"
+    },
+    {
+      "id": 4,
+      "nome": "Where the Wild Things Are",
+      "anoDeLancamento": 1963,
+      "resumo": "Max, a young boy, creates an imaginary world filled with wild creatures after being sent to bed without supper. He becomes the king of the Wild Things, learning about emotions and the importance of home.",
+      "autor": "Maurice Sendak"
+    },
+    {
+      "id": 5,
+      "nome": "Winnie-the-Pooh",
+      "anoDeLancamento": 1926,
+      "resumo": "The delightful adventures of Pooh Bear and his friends Piglet, Eeyore, and Tigger in the Hundred Acre Wood. Full of gentle humor and timeless wisdom, these stories explore themes of friendship and kindness.",
+      "autor": "A.A. Milne"
+    },
+    {
+      "id": 6,
+      "nome": "Harold and the Purple Crayon",
+      "anoDeLancamento": 1955,
+      "resumo": "Harold, a young boy, uses his purple crayon to create a world of adventure. His drawings come to life, leading him through various imaginative escapades that highlight creativity and problem-solving.",
+      "autor": "Crockett Johnson"
+    },
+    {
+      "id": 7,
+      "nome": "Guess How Much I Love You",
+      "anoDeLancamento": 1994,
+      "resumo": "A heartwarming story about the boundless love between a parent and child, expressed through Little Nutbrown Hare and Big Nutbrown Hare. The narrative beautifully captures the depth of love in simple, yet powerful terms.",
+      "autor": "Sam McBratney"
+    },
+    {
+      "id": 8,
+      "nome": "The Tale of Peter Rabbit",
+      "anoDeLancamento": 1902,
+      "resumo": "The mischievous adventures of Peter Rabbit, who disobeys his mother's warnings and sneaks into Mr. McGregor's garden. The story highlights curiosity, consequence, and the comforts of home after a harrowing adventure.",
+      "autor": "Beatrix Potter"
+    },
+    {
+      "id": 9,
+      "nome": "The Giving Tree",
+      "anoDeLancamento": 1964,
+      "resumo": "A touching story about the relationship between a boy and a tree. The tree selflessly gives everything to the boy throughout his life, showcasing themes of unconditional love, generosity, and the passage of time.",
+      "autor": "Shel Silverstein"
+    },
+    {
+      "id": 10,
+      "nome": "Room on the Broom",
+      "anoDeLancamento": 2001,
+      "resumo": "A friendly witch and her cat make room on their broom for a dog, a bird, and a frog. Despite the broom breaking, their combined efforts defeat a dragon, demonstrating the value of kindness and cooperation.",
+      "autor": "Julia Donaldson"
+    }
+  ]
+  
