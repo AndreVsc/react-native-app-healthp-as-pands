@@ -5,7 +5,19 @@ export const styles = StyleSheet.create({
     flex: 1,
     backgroundColor:'#C7617F'
   },
-  
+
+  buttonText:{
+
+  },
+  textStatusTimer: {
+    color: "#ffffff",
+    fontSize: 15,
+  },
+
+  button:{
+
+  },
+
   containerBack: {
     flex: 1,
     paddingTop: 40,
@@ -27,14 +39,21 @@ export const styles = StyleSheet.create({
 
   containerTop: {
     flex: 1,
-    padding: 20,
-    justifyContent: 'space-around',
+    padding: 10,
+    paddingLeft:35,
+    justifyContent: 'space-between',
     flexDirection: 'row',
     alignItems: 'flex-start',
     maxHeight: 180,
+
   },
 
-  containerWeekSettings: {
+  timerText: {
+    fontSize: 40,
+    color: '#ffffff',
+  },
+
+  containerPracticeSettings: {
     flex: 1,
     alignItems: 'center',
   },
@@ -50,34 +69,17 @@ export const styles = StyleSheet.create({
     gap:30,  
   },
 
-  containerWeek: {
+  containerPractice: {
     flex: 1,
     backgroundColor: '#fff',
     width: "80%",
     maxHeight: 50,
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     padding: 10,
+    paddingLeft:40,
+    paddingRight:40,
     flexDirection: 'row',
     borderRadius: 20,
   },
-
-  buttonWater: {
-    alignItems:'center',
-    justifyContent:'center',
-    backgroundColor:"#fff",
-    padding:20,
-    borderRadius:50,
-  },
-
-  containerWaterSettings:{
-    flexDirection:'row',
-    justifyContent:'space-between',
-  },
-
-  textWaterSettings:{
-    fontSize:20,
-    color:'#888',
-    fontWeight:'bold',
-  }
 });
