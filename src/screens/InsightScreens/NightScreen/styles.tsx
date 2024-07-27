@@ -25,21 +25,22 @@ export const styles = StyleSheet.create({
     fontSize: 19,
   },
 
-  containerTop: {
+  containerTopNight: {
     flex: 1,
     padding: 20,
+    paddingLeft:65,
     justifyContent: 'space-around',
     flexDirection: 'row',
     alignItems: 'flex-start',
     maxHeight: 180,
   },
 
-  containerNightSettings: {
+  containerNight: {
     flex: 1,
     alignItems: 'center',
   },
   
-  containerNight: {
+  containerNightButton: {
     flex: 1,
     backgroundColor: '#fff',
     width: "80%",
@@ -51,7 +52,7 @@ export const styles = StyleSheet.create({
     borderRadius: 20,
   },
 
-  containerSettings: {
+  containerSettingsNight: {
     backgroundColor:'#fff',
     padding:45,
     paddingTop:30,
@@ -61,15 +62,4 @@ export const styles = StyleSheet.create({
     height:300,
     gap:30,  
   },
-
-  containerWaterSettings:{
-    flexDirection:'row',
-    justifyContent:'space-between',
-  },
-
-  textWaterSettings:{
-    fontSize:20,
-    color:'#888',
-    fontWeight:'bold',
-  }
 });

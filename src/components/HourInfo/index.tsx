@@ -6,8 +6,8 @@ import { hourInfoProps } from './props';
 
 export function HourInfo({dataMode}:hourInfoProps) {
   return (
-    <View>
+    <>
         <Clock dataMode={dataMode}  />
-    </View>
+    </>
   );
 }
