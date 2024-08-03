@@ -3,8 +3,6 @@ import { StyleSheet } from 'react-native';
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 0,
-    height:20,
   },
   title: {
     fontSize: 15,
@@ -41,7 +39,7 @@ export const styles = StyleSheet.create({
   bookResume:{
     flex:1,
     flexDirection:'column',
-    width:120,
+    width:90,
     height:100,
     marginBottom:10,
   },

@@ -39,7 +39,7 @@ export function PracticeScreen({ navigation }: any) {
     }
   };
 
-  const status = isRunning ? 'Running' : 'Paused'; // Define o status baseado no estado
+  const status = isRunning ? 'Running' : 'Paused';
 
   return (
     <View style={styles.container}>

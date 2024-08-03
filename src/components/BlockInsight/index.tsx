@@ -9,7 +9,7 @@ import { PeriodNight } from '../PeriodNight';
 import { WeekWater } from '../WeekWater';
 import { WeekInfo } from '../WeekInfo';
 import { HourInfo } from '../HourInfo';
-import { ASSETS_BASE_URL_PRATICE } from '../../constants/cat';
+import { ASSETS_BASE_URL_PRATICE } from '../../constants/pratice';
 
 export function BlockInsight({ mode, navigation }: blockInsightProps) {
   return (
@@ -38,7 +38,7 @@ export function BlockInsight({ mode, navigation }: blockInsightProps) {
         <TouchableOpacity style={styles.containerPractice} onPress={() => { navigation.navigate('Practice'); }}>
           <View style={[styles.containerPrees, { backgroundColor: 'transparent', height: 100, padding: 20 }]}>
             <Text style={styles.textPractice}>
-              Cerca de um quarto da população não consegue se exercitar nem por meia hora.
+            1/4 of the population is unable to exercise for even half an hour.
             </Text>
             <SimpleLineIcons name="arrow-right" size={44} color="white" />
           </View>

@@ -6,12 +6,10 @@ import { styles } from './styles';
 import { insightSelectionProps } from './props';
 
 export function InsightSelection({ navigation }: insightSelectionProps) {
-  // Cria animações para deslocamento vertical e opacidade
   const animations = [new Animated.Value(100), new Animated.Value(100), new Animated.Value(100)];
   const opacityAnimations = [new Animated.Value(0), new Animated.Value(0), new Animated.Value(0)];
 
   useEffect(() => {
-    // Define a animação para cada BlockInsight
     Animated.stagger(200, animations.map((anim, index) => 
       Animated.parallel([
         Animated.timing(anim, {

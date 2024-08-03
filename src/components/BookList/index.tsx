@@ -33,7 +33,7 @@ export function BookList() {
   };
 
   return (
-    <View style={styles.container}>
+    <>
       <View style={styles.containerTopBook}>
         <Text style={styles.title}>Bedtime Reading</Text>
         <TouchableOpacity onPress={likedPress} style={styles.likeButton}>
@@ -58,15 +58,15 @@ export function BookList() {
       <View style={styles.navigationContainer}>
         {id > 1 && (
           <TouchableOpacity style={styles.buttonNavigationLeft} onPress={() => setId(prevId => prevId - 1)}>
-            <Text style={styles.navigationText}>{'< Anterior'}</Text>
+            <Text style={styles.navigationText}>{'Previous'}</Text>
           </TouchableOpacity>
         )}
         {id < books.length && (
           <TouchableOpacity style={styles.buttonNavigationRight} onPress={() => setId(prevId => prevId + 1)}>
-            <Text style={styles.navigationText}>{'Próximo >'}</Text>
+            <Text style={styles.navigationText}>{'Next'}</Text>
           </TouchableOpacity>
         )}
       </View>
-    </View>
+    </>
   );
 }

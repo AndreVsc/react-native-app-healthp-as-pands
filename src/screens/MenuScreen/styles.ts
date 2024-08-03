@@ -45,7 +45,7 @@ export const styles = StyleSheet.create({
     },
     
     textNavbarItems:{
-      fontSize:25,
+      fontSize:20,
       fontWeight:'bold',
       color:'#1B232F',
     },

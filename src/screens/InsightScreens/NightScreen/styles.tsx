@@ -53,13 +53,13 @@ export const styles = StyleSheet.create({
   },
 
   containerSettingsNight: {
+    flex: 1,
     backgroundColor:'#fff',
-    padding:45,
-    paddingTop:30,
+    padding: 25,
     borderRadius:20,
     marginTop:20,
     width:325,
-    height:300,
-    gap:30,  
+    maxHeight:300,
+    gap:15, 
   },
 });
