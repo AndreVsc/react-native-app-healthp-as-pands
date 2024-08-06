@@ -1,4 +1,3 @@
-// MenuScreen.tsx
 import React from 'react';
 import { TouchableOpacity, View, Text } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
@@ -6,15 +5,15 @@ import { Ionicons, FontAwesome6 } from '@expo/vector-icons';
 
 // Components
 import { InsightSelection } from '../../components/InsightSelection';
-import { NotificationPermissionRequest } from "./NotificationPermissionRequest";
+import { NotificationPermissionRequest } from './actions';
 
 // Menu imports
 import { styles } from './styles';
 import { menuScreenProps } from './props';
 
-export function MenuScreen({ navigation }: menuScreenProps) {
+export const MenuScreen: React.FC<menuScreenProps> = ({ navigation }) => {
 
-  function Navbar({ navigation }: menuScreenProps) {
+  const Navbar: React.FC<menuScreenProps> = ({ navigation }) => {
     return (
       <>
         <View style={styles.containerNavbarLeftItems}>
@@ -40,7 +39,7 @@ export function MenuScreen({ navigation }: menuScreenProps) {
       <View style={styles.containerInsightSelection}>
         <InsightSelection navigation={navigation} mode={''} />
       </View>
-        <NotificationPermissionRequest />
+      <NotificationPermissionRequest />
       <StatusBar style="light" />
     </View>
   );

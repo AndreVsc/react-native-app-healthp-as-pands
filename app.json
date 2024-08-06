@@ -4,7 +4,7 @@
   "main": "expo/AppEntry.js",
   "slug": "PANDS-App",
   "orientation": "portrait",
-  "icon": "./assets/icon.png",
+  "icon": "./assets/Panda.png",
   "splash": {
     "image": "./assets/splash.png",
     "resizeMode": "contain",
@@ -42,6 +42,16 @@
   },
   "private": true,
   "plugins": [
-    "expo-asset"
+    "expo-asset",
+    [
+      "expo-notifications",
+      {
+        "icon": "./assets/Panda.png",
+        "sounds": [
+          "./assets/notification.wav"
+        ]
+      }
+    ]
+    
   ]
 }

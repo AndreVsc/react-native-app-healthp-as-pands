@@ -1,18 +1,20 @@
-export const TIME_OPTIONS_HOURS = (() => {
+export const TIME_OPTIONS_HOURS = Array.from({ length: 12 }, (_, i) => ({
+  label: `${i < 9 ? `0${i+1}` : i+1}`,
+  value: i + 1,
+}));
+
+export const TIME_OPTIONS_MINUTES = (() => {
   const times = [];
-  const periods = ['AM', 'PM'];
-
-  for (const period of periods) {
-    for (let hour = 1; hour <= 12; hour++) {
-      for (let minute = 0; minute < 60; minute += 5) {
-        const formattedHour = hour < 10 ? `0${hour}` : hour;
-        const formattedMinute = minute < 10 ? `0${minute}` : minute;
-        const label = `${formattedHour}:${formattedMinute} ${period}`;
-        const value = `${formattedHour}:${formattedMinute} ${period}`;
-        times.push({ label, value });
-      }
-    }
+  for (let minute = 0; minute < 60; minute++) {
+    const formattedMinute = minute < 10 ? `0${minute}` : minute;
+    const label = `${formattedMinute}`;
+    const value = `${minute}`;
+    times.push({ label, value });
   }
-
   return times;
 })();
+
+export const TIME_OPTIONS_PERIODS = [
+  { label: 'AM', value: 'AM' },
+  { label: 'PM', value: 'PM' },
+];

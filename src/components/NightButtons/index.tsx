@@ -13,10 +13,10 @@ export function NightButtons() {
             <FontAwesome6 name="puzzle-piece" size={24} color="#9D95D6" />
         </TouchableOpacity>
         <TouchableOpacity>
-        <FontAwesome6 name="book-open" size={20} color="#7F76B8" />
+          <FontAwesome6 name="book-open" size={20} color="#7F76B8" />
         </TouchableOpacity>
         <TouchableOpacity>
-        <MaterialCommunityIcons name="meditation" size={34} color="#9D95D6" />
+          <MaterialCommunityIcons name="meditation" size={34} color="#9D95D6" />
         </TouchableOpacity>
     </View>
   );

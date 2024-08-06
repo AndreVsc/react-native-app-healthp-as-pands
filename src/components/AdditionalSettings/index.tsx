@@ -1,6 +1,6 @@
 import React from 'react';
 import { View } from 'react-native';
-import { styles } from '../../screens/InsightScreens/PracticeScreen/styles';
+import { styles } from './styles';
 
 const AdditionalSettings: React.FC = () => {
   return (

@@ -1,16 +1,13 @@
-// NotificationPermissionRequest.tsx
 import React, { useEffect, useState } from 'react';
-import { Alert, Button, View, Text, Platform, Linking } from 'react-native';
+import { Alert, Platform, Linking } from 'react-native';
 import * as Notifications from 'expo-notifications';
 import * as Device from 'expo-device';
 
-export function NotificationPermissionRequest() {
+export const NotificationPermissionRequest: React.FC = () => {
   const [permissionStatus, setPermissionStatus] = useState<string>('unknown');
 
   useEffect(() => {
-    (async () => {
-      await requestPermissions();
-    })();
+    requestPermissions();
   }, []);
 
   const requestPermissions = async () => {
@@ -33,16 +30,9 @@ export function NotificationPermissionRequest() {
             {
               text: 'Abrir Configurações',
               onPress: () => {
-                if (Platform.OS === 'android') {
-                  // Usando o pacote 'react-native-device-info' para obter o package name
-                  Linking.openSettings().catch((error) => {
-                    console.error('Failed to open settings:', error);
-                  });
-                } else {
-                  Linking.openSettings().catch((error) => {
-                    console.error('Failed to open settings:', error);
-                  });
-                }
+                Linking.openSettings().catch((error) => {
+                  console.error('Failed to open settings:', error);
+                });
               },
             },
             { text: 'OK' }
@@ -58,5 +48,5 @@ export function NotificationPermissionRequest() {
     }
   };
 
-  return <></>;
-}
+  return null;
+};

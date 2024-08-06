@@ -1,101 +1,66 @@
 import React, { useState, useEffect } from 'react';
-import { Text, View } from 'react-native';
+import { View, Text } from 'react-native';
 import RNPickerSelect from 'react-native-picker-select';
 import * as Notifications from 'expo-notifications';
 import { styles } from './styles';
-import { TIME_OPTIONS_HOURS } from './constants';
-
-// Configuração do manipulador de notificações
-Notifications.setNotificationHandler({
-  handleNotification: async () => ({
-    shouldShowAlert: true,
-    shouldPlaySound: false,
-    shouldSetBadge: false,
-  }),
-});
-
-const convertTo24HourFormat = (time: string) => {
-  const [hourMinute, period] = time.split(' ');
-  const [hour, minute] = hourMinute.split(':').map(Number);
-  
-  let adjustedHour = hour % 12;
-  if (period === 'PM') adjustedHour += 12;
-  
-  return { hour: adjustedHour, minute };
-};
-
-// Função para agendar uma notificação diária
-async function scheduleDailyNotification(time: string, title: string, body: string) {
-
-  const { hour, minute } = convertTo24HourFormat(time);
-  const now = new Date();
-  
-  const trigger = new Date();
-  trigger.setHours(hour);
-  trigger.setMinutes(minute);
-  trigger.setSeconds(0);
-  trigger.setMilliseconds(0);
-
-  if (trigger <= now) {
-    trigger.setDate(trigger.getDate() + 1);
-  }
-
-  await Notifications.scheduleNotificationAsync({
-    content: {
-      title,
-      body,
-    },
-    trigger: {
-      hour: trigger.getHours(),
-      minute: trigger.getMinutes(),
-      repeats: true,
-    },
-  });
-}
+import { TIME_OPTIONS_HOURS, TIME_OPTIONS_MINUTES, TIME_OPTIONS_PERIODS } from './constants';
+import { scheduleDailyNotification, cancelMismatchedNotifications, cancelAllNotifications } from './actions';
 
 export function PeriodNight() {
-  const [wakeTime, setWakeTime] = useState<string | null>(null);
-  const [sleepTime, setSleepTime] = useState<string | null>(null);
+  const [hour, setHour] = useState<number | null>(null);
+  const [minute, setMinute] = useState<number | null>(null);
+  const [period, setPeriod] = useState<string | null>(null);
 
-  // Função para lidar com notificações recebidas enquanto o aplicativo está em primeiro plano
   useEffect(() => {
-    const subscription = Notifications.addNotificationReceivedListener(notification => {
-    });
+    const subscription = Notifications.addNotificationReceivedListener(notification => {});
 
     return () => subscription.remove();
   }, []);
 
-  const handleWakeTimeChange = (value: string | null) => {
-    setWakeTime(value);
-    if (value) {
-      scheduleDailyNotification(value, 'Hora de Acordar', 'É hora de acordar e começar o dia!');
+  const handleTimeChange = async () => {
+    if (hour !== null && minute !== null && period !== null) {
+      const hourNumber = hour;
+      const minuteNumber = minute;
+
+      if (!isNaN(hourNumber) && !isNaN(minuteNumber)) {
+        await cancelMismatchedNotifications(hourNumber, minuteNumber, period); // Cancela notificações que não correspondem ao horário selecionado
+        await scheduleDailyNotification(hourNumber, minuteNumber, period, "Time to sleep", "It's time to go to bed and rest!");
+      } else {
+        await cancelAllNotifications();
+      }
+    } else {
+      await cancelAllNotifications();
     }
   };
 
-  const handleSleepTimeChange = (value: string | null) => {
-    setSleepTime(value);
-    if (value) {
-      scheduleDailyNotification(value, 'Hora de Dormir', 'É hora de ir para a cama e descansar!');
-    }
-  };
+  useEffect(() => {
+    handleTimeChange();
+  }, [hour, minute, period]);
 
   return (
     <View style={styles.container}>
       <View>
         <RNPickerSelect
-          onValueChange={handleWakeTimeChange}
+          onValueChange={(value) => setHour(value)}
           items={TIME_OPTIONS_HOURS}
-          placeholder={{ label: '--:-- AM/PM', value: null }}
+          placeholder={{ label: '- -', value: null }}
         />
       </View>
       <View>
-        <Text style={styles.modalItemText}>TO</Text>
+        <Text style={{color:'#c4c4c4'}}>:</Text>
       </View>
       <View>
         <RNPickerSelect
-          onValueChange={handleSleepTimeChange}
-          items={TIME_OPTIONS_HOURS}
-          placeholder={{ label: '--:-- AM/PM', value: null }}
+          onValueChange={(value) => setMinute(value)}
+          items={TIME_OPTIONS_MINUTES}
+          placeholder={{ label: '- -', value: null }}
+        />
+      </View>
+      <View>
+        <RNPickerSelect
+          onValueChange={(value) => setPeriod(value)}
+          items={TIME_OPTIONS_PERIODS}
+          placeholder={{ label: 'AM/PM', value: null }}
         />
       </View>
     </View>

@@ -4,9 +4,9 @@ export const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'row',
+    justifyContent:'center',
     gap: 10,
     maxHeight: 50,
-    justifyContent: 'space-around',
     alignItems: 'center',
   },
 
@@ -17,12 +17,12 @@ export const styles = StyleSheet.create({
 
   colonText: {
     fontSize: 20,
-    color: '#000',
+    color: '#9D95D6',
     marginHorizontal: 5,
   },
 
   modalItemText: {
     fontSize: 12,
-    color: '#c4c4c4',
+    color: '#9D95D6',
   },
 });
