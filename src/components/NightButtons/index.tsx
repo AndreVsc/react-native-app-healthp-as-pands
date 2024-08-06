@@ -1,23 +1,19 @@
 import React from 'react';
-import { View, TouchableOpacity, Text } from 'react-native';
-
+import { View, TouchableOpacity } from 'react-native';
 import { FontAwesome6 } from '@expo/vector-icons';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 
+import { nightButtonsProps } from './props';
 import { styles } from './styles';
 
-export function NightButtons() {
+export const NightButtons = (props: nightButtonsProps) => {
   return (
     <View style={styles.container}>
-        <TouchableOpacity>
-            <FontAwesome6 name="puzzle-piece" size={24} color="#9D95D6" />
-        </TouchableOpacity>
-        <TouchableOpacity>
-          <FontAwesome6 name="book-open" size={20} color="#7F76B8" />
-        </TouchableOpacity>
-        <TouchableOpacity>
-          <MaterialCommunityIcons name="meditation" size={34} color="#9D95D6" />
-        </TouchableOpacity>
+      <TouchableOpacity onPress={() => props.closed()}>
+        <FontAwesome6 name="puzzle-piece" size={24} color="#9D95D6" />
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => props.open()}>
+        <FontAwesome6 name="book-open" size={20} color="#7F76B8" />
+      </TouchableOpacity>
     </View>
   );
 }

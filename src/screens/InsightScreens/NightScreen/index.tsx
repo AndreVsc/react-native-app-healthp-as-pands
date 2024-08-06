@@ -1,32 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text } from 'react-native';
 
 import { ButtonBack } from '../../../components/ButtonBack';
 import { NightButtons } from '../../../components/NightButtons';
-
-import { styles } from './styles';
 import { BookList } from '../../../components/BookList';
 import { HourInfo } from '../../../components/HourInfo';
+import { styles } from './styles';
+import { LightInTheDark } from '../../../components/LightInTheDark';
 
-export function NigthScreen({navigation}:any) {
+export const NightScreen = ({ navigation }: any) => {
+  const [setting, setSetting] = useState<boolean>(false);
+
+  const settingClosed = () =>{
+    return setSetting(false);
+  }
+
+  const settingOpen = () =>{
+    return setSetting(true);
+  }
+
   return (
     <View style={styles.container}>
-          <View style={styles.containerBack}>
-            <ButtonBack navigation={navigation} />
-            <Text style={styles.textMenuBack} >Night</Text>
-          </View>
-          <View style={styles.containerTopNight}>
-              <HourInfo dataMode={true} />
-              <View></View>
-          </View>
-          <View style={styles.containerNight}>
-            <View style={styles.containerNightButton}>
-              <NightButtons />
-            </View>
-            <View style={styles.containerSettingsNight}>
-              <BookList/>
-            </View>
-          </View>
+      <View style={styles.containerBack}>
+        <ButtonBack navigation={navigation} />
+        <Text style={styles.textMenuBack}>Night</Text>
+      </View>
+      <View style={styles.containerTopNight}>
+        <HourInfo dataMode={true} />
+      </View>
+      <View style={styles.containerNight}>
+        <View style={styles.containerNightButton}>
+          <NightButtons open={settingOpen} closed={settingClosed} />
+        </View>
+        <View style={styles.containerSettingsNight}>
+          {setting? <BookList /> : <LightInTheDark/>}
+        </View>
+      </View>
     </View>
   );
 }

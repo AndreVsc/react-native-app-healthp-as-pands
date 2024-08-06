@@ -40,7 +40,7 @@ export const MenuScreen: React.FC<menuScreenProps> = ({ navigation }) => {
         <InsightSelection navigation={navigation} mode={''} />
       </View>
       <NotificationPermissionRequest />
-      <StatusBar style="light" />
+      <StatusBar style="dark" />
     </View>
   );
 }
