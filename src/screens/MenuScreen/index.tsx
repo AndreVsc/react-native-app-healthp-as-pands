@@ -1,21 +1,22 @@
-import React from 'react';
-import { TouchableOpacity, View, Text } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, TouchableOpacity } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { Ionicons, FontAwesome6 } from '@expo/vector-icons';
-
-// Components
-import { InsightSelection } from '../../components/InsightSelection';
-import { NotificationPermissionRequest } from './actions';
-
-// Menu imports
 import { styles } from './styles';
-import { menuScreenProps } from './props';
+import { InsightSelection } from '../../components/InsightSelection';
+import Sidebar from '../../components/Sidebar';
 
-export const MenuScreen: React.FC<menuScreenProps> = ({ navigation }) => {
+export const MenuScreen: React.FC = ({ navigation }: any) => {
+  const [sidebarVisible, setSidebarVisible] = useState(false);
 
-  const Navbar: React.FC<menuScreenProps> = ({ navigation }) => {
-    return (
-      <>
+  const toggleSidebar = () => {
+    setSidebarVisible(!sidebarVisible);
+  };
+
+  return (
+    <View style={styles.container}>
+      <Sidebar visible={sidebarVisible} onClose={() => setSidebarVisible(false)} />
+      <View style={styles.containerNavbar}>
         <View style={styles.containerNavbarLeftItems}>
           <View style={styles.acountNavbarItems}>
             <TouchableOpacity onPress={() => { navigation.navigate('Account') }}>
@@ -25,22 +26,15 @@ export const MenuScreen: React.FC<menuScreenProps> = ({ navigation }) => {
           <Text style={styles.textNavbarItems}>Insights</Text>
         </View>
         <View style={styles.containerNavbarRigthItems}>
-          <Ionicons name="settings-sharp" size={22} color="black" />
+          <TouchableOpacity onPress={toggleSidebar}>
+            <Ionicons name="settings-sharp" size={22} color="black" />
+          </TouchableOpacity>
         </View>
-      </>
-    );
-  }
-
-  return (
-    <View style={styles.container}>
-      <View style={styles.containerNavbar}>
-        <Navbar navigation={navigation} />
       </View>
       <View style={styles.containerInsightSelection}>
         <InsightSelection navigation={navigation} mode={''} />
       </View>
-      <NotificationPermissionRequest />
       <StatusBar style="dark" />
     </View>
   );
-}
+};

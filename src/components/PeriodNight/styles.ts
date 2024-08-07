@@ -5,7 +5,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     justifyContent:'center',
-    gap: 10,
+    gap: 15,
     maxHeight: 50,
     alignItems: 'center',
   },
@@ -13,17 +13,17 @@ export const styles = StyleSheet.create({
   pickerContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    color: '#9D95D6',
+    color: '#AAAB7D',
   },
 
   colonText: {
     fontSize: 20,
-    color: '#9D95D6',
+    color: '#AAAB7D',
     marginHorizontal: 5,
   },
 
   modalItemText: {
     fontSize: 12,
-    color: '#9D95D6',
+    color: '#AAAB7D',
   },
 });
