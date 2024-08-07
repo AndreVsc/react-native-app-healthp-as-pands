@@ -5,9 +5,9 @@ export const styles = StyleSheet.create({
     flex: 1,
   },
   title: {
-    fontSize: 15,
+    fontSize: 12,
     fontWeight: 'bold',
-    color: '#9D9D9D',
+    color:'#c4c4c4',
   },
   titleBook: {
     fontSize: 10,
@@ -44,12 +44,13 @@ export const styles = StyleSheet.create({
     marginBottom:10,
   },
   textResume:{
-    fontSize:13,
+    fontSize:14,
+    textAlign:'justify',
   },
   navigationText: {
-    fontSize: 16,
+    fontSize: 14,
     textDecorationLine:'none',
-    color: '#9D9D9D',
+    color:'#c4c4c4',
     fontWeight:'bold',
   },
   likeButton: {

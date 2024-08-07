@@ -9,7 +9,7 @@ import { styles } from './styles';
 import { LightInTheDark } from '../../../components/LightInTheDark';
 
 export const NightScreen = ({ navigation }: any) => {
-  const [setting, setSetting] = useState<boolean>(false);
+  const [setting, setSetting] = useState<boolean>(true);
 
   const settingClosed = () => {
     return setSetting(false);

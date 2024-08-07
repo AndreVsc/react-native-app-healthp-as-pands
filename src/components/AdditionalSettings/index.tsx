@@ -17,7 +17,7 @@ const AdditionalSettings: React.FC<AdditionalSettingsProps> = ({ id }) => {
   return (
     <ScrollView style={styles.containerSettings}>
       <View>
-        <Text style={styles.exerciseDescription}>5 min</Text>
+        <Text style={styles.exerciseTime}>5 min</Text>
         <Image source={{ uri: exercise.image }} style={[styles.imagePractice, { tintColor: '#E19BB0' }]} />
       </View>
       <View>

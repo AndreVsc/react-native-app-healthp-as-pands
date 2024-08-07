@@ -13,14 +13,19 @@ export const styles = StyleSheet.create({
   imagePractice: {
     justifyContent:'space-around',
     alignSelf:'center',
-    width: 120,
-    height: 120,
+    width: 110,
+    height: 110,
     resizeMode: 'contain', 
     marginBottom: 20,
   },
   exerciseTitle: {
-    fontSize: 14,
+    fontSize: 12,
     fontWeight: 'bold',
+    color:'#c4c4c4',
+  },
+  exerciseTime: {
+    fontSize: 12,
+    fontWeight:'bold',
     color:'#c4c4c4',
   },
   exerciseDescription: {

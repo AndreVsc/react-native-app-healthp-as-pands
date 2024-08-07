@@ -14,6 +14,10 @@ export const styles = StyleSheet.create({
     fontSize: 15,
   },
 
+  disabledButton: {
+    opacity: 0.5,
+  },
+
   button:{
 
   },
