@@ -5,7 +5,7 @@ export const styles = StyleSheet.create({
     flex: 1,
   },
   title: {
-    fontSize: 12,
+    fontSize: 14,
     fontWeight: 'bold',
     color:'#c4c4c4',
   },
@@ -13,7 +13,6 @@ export const styles = StyleSheet.create({
     fontSize: 10,
     fontWeight: 'bold',
     textAlign:'center',
-    marginBottom:2,
     color: '#9D9D9D',
   },
   errorText: {
@@ -22,29 +21,30 @@ export const styles = StyleSheet.create({
   },
   containerTopBook: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center',
+    justifyContent:'flex-end',
+
   },
   containerBookInfo: {
-    flexDirection: 'row',
-    marginVertical: 10,
+    flexDirection: 'column',
+    maxHeight:300,
   },
   bookInfo: {
-    marginRight: 15,
     alignItems:'center',
-    width:50,
     justifyContent:'center',
     textAlign:'center',
+    gap:5,
   },
   bookResume:{
-    flex:1,
     flexDirection:'column',
-    width:90,
-    height:100,
-    marginBottom:10,
+    alignSelf:'center',
+    width:280,
+    height:95,
+    textAlign:'justify',
+    overflow:'scroll',
+    marginTop:10,
   },
   textResume:{
-    fontSize:14,
+    fontSize:13,
     textAlign:'justify',
   },
   navigationText: {
@@ -54,19 +54,18 @@ export const styles = StyleSheet.create({
     fontWeight:'bold',
   },
   likeButton: {
-    padding: 10,
+    marginRight:5,
   },
   navigationContainer: {
     flex:1,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginTop:20,
+    marginTop:10,
   },
   buttonNavigationLeft:{
     flex:1,
   },
   buttonNavigationRight:{
-    
     flex:1,
     alignItems:'flex-end'
   }

@@ -45,6 +45,7 @@ export const styles = StyleSheet.create({
     paddingTop:30,
     borderRadius:20,
     marginTop:20,
+    maxHeight:300,
     gap:30,  
   },
 

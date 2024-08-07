@@ -1,7 +1,5 @@
 import React from 'react';
 import { View, Text, TouchableOpacity} from 'react-native';
-import { StatusBar } from 'expo-status-bar';
-import { LinearGradient } from 'expo-linear-gradient';
 
 import { styles } from './styles';
 import { waterScreenProps } from './props';

@@ -34,21 +34,20 @@ export function BookList() {
 
   return (
     <>
-      <View style={styles.containerTopBook}>
-        <Text style={styles.title}>Bedtime Reading</Text>
-        <TouchableOpacity onPress={likedPress} style={styles.likeButton}>
-          {likeSelect?.liked ? (
-            <AntDesign name="heart" size={24} color="#9D95D6" />
-          ) : (
-            <AntDesign name="hearto" size={24} color="#c4c4c4" />
-          )}
-        </TouchableOpacity>
-      </View>
       <View style={styles.containerBookInfo}>
+          <View style={styles.containerTopBook}>
+            <TouchableOpacity onPress={likedPress} style={styles.likeButton}>
+              {likeSelect?.liked ? (
+                <AntDesign name="heart" size={24} color="#9D95D6" />
+              ) : (
+                <AntDesign name="hearto" size={24} color="#c4c4c4" />
+              )}
+            </TouchableOpacity>
+          </View>
         <View style={styles.bookInfo}>
           <FontAwesome6 name="book-open" size={40} color="#9D95D6" />
           <Text style={styles.titleBook}>{bookSelect.nome}</Text>
-          <Text>{bookSelect.anoDeLancamento}</Text>
+          <Text style={styles.titleBook}>{bookSelect.anoDeLancamento}</Text>
         </View>
         <View style={styles.bookResume}>
           <Text style={styles.textResume}>{bookSelect.resumo}</Text>
