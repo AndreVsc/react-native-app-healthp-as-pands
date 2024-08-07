@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text } from 'react-native';
-import { styles } from '../../screens/InsightScreens/PracticeScreen/styles';
+import { styles } from './styles';
 
 interface TimerProps {
   time: number;

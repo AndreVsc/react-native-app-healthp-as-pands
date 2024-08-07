@@ -1,0 +1,146 @@
+[
+    {
+        "id": 1,
+        "exercise": "Exercise with ball",
+        "description": "Hold an exercise ball and make rotation movements. This helps strengthen the core muscles and improves coordination. If you don't have a ball, use a large cushion. Move slowly and carefully, enjoying each moment of the exercise.",
+        "image": "https://github.com/AndreVsc/pratices-images-repository-github/blob/main/practice/Pratice/png/001-exercicio.png?raw=true"
+    },
+    {
+        "id": 2,
+        "exercise": "Exercise on the bar lifting your own weight",
+        "description": "Grab a fixed bar and lift your body until your chin passes the bar. This exercise is excellent for strengthening the arms and back. If you don't have access to a bar, try doing wall push-ups. Take it slow, respecting your pace, and celebrate each progress.",
+        "image": "https://github.com/AndreVsc/pratices-images-repository-github/blob/main/practice/Pratice/png/002-exercicio.png?raw=true"
+    },
+    {
+        "id": 3,
+        "exercise": "Diversified stretching",
+        "description": "Combine different types of stretches, such as stretching your arms, legs, and torso. This improves overall flexibility and prepares the body for other activities. Feel each muscle stretching and enjoy this moment of self-care.",
+        "image": "https://github.com/AndreVsc/pratices-images-repository-github/blob/main/practice/Pratice/png/003-exercicio.png?raw=true"
+    },
+    {
+        "id": 4,
+        "exercise": "Cycling",
+        "description": "Ride a bike, either outdoors or stationary. This exercise strengthens the legs and improves cardiovascular endurance. If you don't have a bike, try marching in place. Have fun and feel the positive energy this exercise brings.",
+        "image": "https://github.com/AndreVsc/pratices-images-repository-github/blob/main/practice/Pratice/png/004-exercicio.png?raw=true"
+    },
+    {
+        "id": 5,
+        "exercise": "Traditional stretch (putting one hand on the waist and stretching the opposite arm to the side)",
+        "description": "Place one hand on your waist and stretch the opposite arm to the side, stretching the lateral muscles of the torso. Switch sides to balance the stretch. Feel the stretch and the lightness it provides.",
+        "image": "https://github.com/AndreVsc/pratices-images-repository-github/blob/main/practice/Pratice/png/005-exercicio.png?raw=true"
+    },
+    {
+        "id": 6,
+        "exercise": "Knee stretch (indicate switching between the right and left sides)",
+        "description": "Pull your right knee towards your chest and hold for a few seconds. Then, switch to the left side. This stretch improves the flexibility of the leg and glute muscles. Each side needs attention, so switch gently and feel the difference.",
+        "image": "https://github.com/AndreVsc/pratices-images-repository-github/blob/main/practice/Pratice/png/006-exercicio.png?raw=true"
+    },
+    {
+        "id": 7,
+        "exercise": "Running",
+        "description": "Run at a comfortable pace. This exercise improves cardiovascular endurance and strengthens the legs. If you can't run, walk briskly. Feel the wind and the freedom that each step brings.",
+        "image": "https://github.com/AndreVsc/pratices-images-repository-github/blob/main/practice/Pratice/png/007-exercicio.png?raw=true"
+    },
+    {
+        "id": 8,
+        "exercise": "Lifting dumbbells to head height (2 to 5 kg max)",
+        "description": "Hold 2 to 5 kg dumbbells and lift them to head height. This exercise works the shoulder and arm muscles. If you don't have dumbbells, use water bottles. Feel the strength growing with each repetition.",
+        "image": "https://github.com/AndreVsc/pratices-images-repository-github/blob/main/practice/Pratice/png/008-exercicio.png?raw=true"
+    },
+    {
+        "id": 9,
+        "exercise": "Stretching by extending legs from side to side with arms open",
+        "description": "With your arms open, stretch one leg to the side and hold for a few seconds. Switch sides. This exercise improves the flexibility of the legs and torso. Switch sides and feel the balance in your body.",
+        "image": "https://github.com/AndreVsc/pratices-images-repository-github/blob/main/practice/Pratice/png/009-exercicio.png?raw=true"
+    },
+    {
+        "id": 10,
+        "exercise": "Stretching by touching your toes",
+        "description": "Bend forward with your legs straight and try to touch your toes. This stretch is great for the leg and back muscles. Don't push beyond your limit. Each time you try, you are caring for yourself.",
+        "image": "https://github.com/AndreVsc/pratices-images-repository-github/blob/main/practice/Pratice/png/010-exercicio.png?raw=true"
+    },
+    {
+        "id": 11,
+        "exercise": "Waist stretch with arm overhead",
+        "description": "Raise one arm above your head and lean to the opposite side, stretching the waist. Switch sides to balance the stretch. Feel the gentle stretch and the relief it brings to your waist.",
+        "image": "https://github.com/AndreVsc/pratices-images-repository-github/blob/main/practice/Pratice/png/011-exercicio.png?raw=true"
+    },
+    {
+        "id": 12,
+        "exercise": "Push-ups (indicate correct technique and mention potential injury if done incorrectly)",
+        "description": "Lie face down and lift your body using your arms, keeping your body straight. This exercise works the chest, arm, and core muscles. Maintain correct technique to avoid injury. Move slowly and feel the strength in your arms.",
+        "image": "https://github.com/AndreVsc/pratices-images-repository-github/blob/main/practice/Pratice/png/012-exercicio.png?raw=true"
+    },
+    {
+        "id": 13,
+        "exercise": "Lying down and stretching your feet upwards",
+        "description": "Lie on your back and lift your legs straight towards the ceiling. This stretch improves the flexibility of the legs and core. Feel the lightness in your legs and the relaxation in your body.",
+        "image": "https://github.com/AndreVsc/pratices-images-repository-github/blob/main/practice/Pratice/png/013-exercicio.png?raw=true"
+    },
+    {
+        "id": 14,
+        "exercise": "Stretching the leg with support",
+        "description": "Place one foot on an elevated support and lean forward, stretching the leg muscles. Switch legs to balance the stretch. Each leg deserves attention, so switch gently.",
+        "image": "https://github.com/AndreVsc/pratices-images-repository-github/blob/main/practice/Pratice/png/014-exercicio.png?raw=true"
+    },
+    {
+        "id": 15,
+        "exercise": "Lying on a fitness ball",
+        "description": "Lie on your back on a fitness ball and stretch your body. This exercise stretches the core and back muscles. If you don't have a ball, lie on the floor and stretch your arms above your head. Feel the gentle stretch and the relaxation it provides.",
+        "image": "https://github.com/AndreVsc/pratices-images-repository-github/blob/main/practice/Pratice/png/015-exercicio.png?raw=true"
+    },
+    {
+        "id": 16,
+        "exercise": "On all fours with one foot up",
+        "description": "Get on all fours and lift one leg straight back. Hold for a few seconds and switch sides. This exercise strengthens the leg and glute muscles. Switch legs and feel the balance in your body.",
+        "image": "https://github.com/AndreVsc/pratices-images-repository-github/blob/main/practice/Pratice/png/016-exercicio.png?raw=true"
+    },
+    {
+        "id": 17,
+        "exercise": "Semi-squat with hands up",
+        "description": "Stand with your feet shoulder-width apart. Squat slightly, keeping your knees bent, and raise your hands above your head. This exercise strengthens the legs and core. Maintain correct posture to avoid injury and feel the strength in each movement.",
+        "image": "https://github.com/AndreVsc/pratices-images-repository-github/blob/main/practice/Pratice/png/017-exercicio.png?raw=true"
+    },
+    {
+        "id": 18,
+        "exercise": "On all fours with one leg stretched",
+        "description": "Get on all fours, with knees aligned with hips and hands aligned with shoulders. Stretch one leg back and hold for a few seconds. Switch to the other leg. This exercise strengthens the leg and glute muscles, and improves balance. Switch legs and feel the balance in your body.",
+        "image": "https://github.com/AndreVsc/pratices-images-repository-github/blob/main/practice/Pratice/png/018-exercicio.png?raw=true"
+    },
+    {
+        "id": 19,
+        "exercise": "Sitting and reaching forward",
+        "description": "Sit on the floor with your legs stretched out. Lean forward, trying to reach as far as you can. This exercise stretches the back and leg muscles, improving flexibility. Feel the stretch and the care you are giving your body.",
+        "image": "https://github.com/AndreVsc/pratices-images-repository-github/blob/main/practice/Pratice/png/019-exercicio.png?raw=true"
+    },
+    {
+        "id": 20,
+        "exercise": "Sitting and reaching for your feet",
+        "description": "Sit on the floor with your legs stretched out. Lean forward and try to touch your toes. This stretch is excellent for the leg and back muscles. Don't push beyond your limit and practice regularly to see improvements in flexibility. Each attempt is a step in the path of self-care.",
+        "image": "https://github.com/AndreVsc/pratices-images-repository-github/blob/main/practice/Pratice/png/020-exercicio.png?raw=true"
+    },
+    {
+        "id": 21,
+        "exercise": "Jump rope",
+        "description": "Jump rope at a comfortable pace. This activity is great for improving coordination, cardiovascular endurance, and strengthening the legs. If you don't have a rope, you can mimic the movement without it. Have fun and feel the positive energy this exercise brings.",
+        "image": "https://github.com/AndreVsc/pratices-images-repository-github/blob/main/practice/Pratice/png/021-exercicio.png?raw=true"
+    },
+    {
+        "id": 22,
+        "exercise": "Stretching arms and body to the side",
+        "description": "Stand with feet shoulder-width apart, raise one arm above your head, and lean to the opposite side. Hold for a few seconds and switch sides. This exercise stretches the lateral muscles of the torso and improves flexibility. Switch sides and feel the gentle stretch in your body.",
+        "image": "https://github.com/AndreVsc/pratices-images-repository-github/blob/main/practice/Pratice/png/022-exercicio.png?raw=true"
+    },
+    {
+        "id": 23,
+        "exercise": "Stretching/moving the hips",
+        "description": "Stand and move your hips in circles, first one way and then the other. This exercise helps loosen the hip area and improves mobility. Move gently and feel the lightness in your hips.",
+        "image": "https://github.com/AndreVsc/pratices-images-repository-github/blob/main/practice/Pratice/png/023-exercicio.png?raw=true"
+    },
+    {
+        "id": 24,
+        "exercise": "Yoga pose balancing on one leg",
+        "description": "Stand and lift one leg, placing the foot against the inner thigh or calf of the other leg. Maintain balance. Switch legs after a few seconds. This exercise improves balance and leg strength. If needed, use a wall for support until you gain more confidence. Feel the calm and inner strength while balancing.",
+        "image": "https://github.com/AndreVsc/pratices-images-repository-github/blob/main/practice/Pratice/png/024-exercicio.png?raw=true"
+    }
+]

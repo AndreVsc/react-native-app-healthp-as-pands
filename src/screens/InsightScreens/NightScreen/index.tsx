@@ -11,13 +11,13 @@ import { LightInTheDark } from '../../../components/LightInTheDark';
 export const NightScreen = ({ navigation }: any) => {
   const [setting, setSetting] = useState<boolean>(false);
 
-  const settingClosed = () =>{
+  const settingClosed = () => {
     return setSetting(false);
-  }
+  };
 
-  const settingOpen = () =>{
+  const settingOpen = () => {
     return setSetting(true);
-  }
+  };
 
   return (
     <View style={styles.container}>
@@ -30,12 +30,12 @@ export const NightScreen = ({ navigation }: any) => {
       </View>
       <View style={styles.containerNight}>
         <View style={styles.containerNightButton}>
-          <NightButtons open={settingOpen} closed={settingClosed} />
+          <NightButtons setting={setting} open={settingOpen} closed={settingClosed} />
         </View>
         <View style={styles.containerSettingsNight}>
-          {setting? <BookList /> : <LightInTheDark/>}
+          {setting ? <BookList /> : <LightInTheDark />}
         </View>
       </View>
     </View>
   );
-}
+};

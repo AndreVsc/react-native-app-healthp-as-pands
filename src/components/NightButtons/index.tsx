@@ -8,12 +8,20 @@ import { styles } from './styles';
 export const NightButtons = (props: nightButtonsProps) => {
   return (
     <View style={styles.container}>
-      <TouchableOpacity onPress={() => props.closed()}>
-        <FontAwesome6 name="puzzle-piece" size={24} color="#9D95D6" />
+      <TouchableOpacity onPress={props.closed}>
+        <FontAwesome6 
+          name="puzzle-piece" 
+          size={24} 
+          color={props.setting ? "#9D95D6" : "#7F76B8"} 
+        />
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => props.open()}>
-        <FontAwesome6 name="book-open" size={20} color="#7F76B8" />
+      <TouchableOpacity onPress={props.open}>
+        <FontAwesome6
+          name="book" 
+          size={20} 
+          color={props.setting ? "#7F76B8" : "#9D95D6"} 
+        />
       </TouchableOpacity>
     </View>
   );
-}
+};

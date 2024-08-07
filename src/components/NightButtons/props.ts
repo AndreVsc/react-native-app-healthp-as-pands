@@ -1,5 +1,5 @@
 export interface nightButtonsProps {
-    open: () => void; 
-    closed: () => void; 
+  open: () => void; 
+  closed: () => void;
+  setting: boolean;
 }
-  

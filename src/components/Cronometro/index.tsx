@@ -1,12 +1,10 @@
 // src/components/Cronometro.tsx
-import React, { useEffect, useState } from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
+import React from 'react';
+import { View, Text } from 'react-native';
+import { styles } from './styles';
+import { CronometroProps } from './props';
 
-interface CronometroProps {
-  time: number; // Tempo em segundos
-}
-
-const Cronometro: React.FC<CronometroProps> = ({ time }) => {
+export const Cronometro: React.FC<CronometroProps> = ({ time }) => {
   const minutes = Math.floor(time / 60);
   const seconds = time % 60;
 
@@ -16,17 +14,3 @@ const Cronometro: React.FC<CronometroProps> = ({ time }) => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 20,
-  },
-  text: {
-    fontSize: 30,
-    fontWeight: 'bold',
-  },
-});
-
-export default Cronometro;

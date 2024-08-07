@@ -13,6 +13,7 @@ export const styles = StyleSheet.create({
   pickerContainer: {
     flexDirection: 'row',
     alignItems: 'center',
+    color: '#9D95D6',
   },
 
   colonText: {
