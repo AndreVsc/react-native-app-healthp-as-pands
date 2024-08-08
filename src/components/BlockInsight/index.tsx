@@ -35,6 +35,7 @@ export function BlockInsight({ mode, navigation }: blockInsightProps) {
           </View>
         </>
       ) : mode === 'practice' ? (
+       <>
         <TouchableOpacity style={styles.containerPractice} onPress={() => { navigation.navigate('Practice'); }}>
           <View style={[styles.containerPrees, { backgroundColor: 'transparent', height: 100, padding: 20 }]}>
             <Text style={styles.textPractice}>
@@ -57,6 +58,7 @@ export function BlockInsight({ mode, navigation }: blockInsightProps) {
             />
           </View>
         </TouchableOpacity>
+       </>
       ) : null}
     </View>
   );

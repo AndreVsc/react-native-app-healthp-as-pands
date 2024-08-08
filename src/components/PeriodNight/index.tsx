@@ -55,7 +55,7 @@ export function PeriodNight() {
       const minuteNumber = minute;
 
       if (!isNaN(hourNumber) && !isNaN(minuteNumber)) {
-        await cancelMismatchedNotifications(hourNumber, minuteNumber, period); // Cancela notificações que não correspondem ao horário selecionado
+        await cancelMismatchedNotifications(hourNumber, minuteNumber, period); 
         await scheduleDailyNotification(hourNumber, minuteNumber, period, "Time to sleep", "It's time to go to bed and rest!");
       } else {
         await cancelAllNotifications();

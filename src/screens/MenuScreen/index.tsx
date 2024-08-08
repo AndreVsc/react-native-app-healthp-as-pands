@@ -4,7 +4,7 @@ import { StatusBar } from 'expo-status-bar';
 import { Ionicons, FontAwesome6 } from '@expo/vector-icons';
 import { styles } from './styles';
 import { InsightSelection } from '../../components/InsightSelection';
-import Sidebar from '../../components/Sidebar';
+import { Sidebar } from '../../components/Sidebar';
 
 export const MenuScreen: React.FC = ({ navigation }: any) => {
   const [sidebarVisible, setSidebarVisible] = useState(false);
@@ -32,7 +32,7 @@ export const MenuScreen: React.FC = ({ navigation }: any) => {
         </View>
       </View>
       <View style={styles.containerInsightSelection}>
-        <InsightSelection navigation={navigation} mode={''} />
+        <InsightSelection navigation={navigation}/>
       </View>
       <StatusBar style="dark" />
     </View>

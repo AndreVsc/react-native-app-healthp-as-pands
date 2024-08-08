@@ -25,12 +25,19 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     alignContent: 'center',
     backgroundColor: 'white',
-    width: 330,
+    width: 315,
     height:45,
     borderRadius: 15,
     borderTopRightRadius: 0,
     borderTopLeftRadius: 0,
     padding: 10,
+    borderLeftWidth: 1,
+    borderLeftColor: '#ddd',
+    shadowColor: '#000',
+    shadowOffset: { width: -2, height: 0 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 4,
   },
 
   containerPractice:{
@@ -40,7 +47,13 @@ export const styles = StyleSheet.create({
     backgroundColor: '#C7617F', 
     height: 195, 
     borderRadius:20,
-   
+    borderLeftWidth: 1,
+    borderLeftColor: '#ddd',
+    shadowColor: '#000',
+    shadowOffset: { width: -2, height: 0 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+    elevation: 4,
   },
 
   textPractice: {
@@ -62,8 +75,8 @@ export const styles = StyleSheet.create({
   imagePractice: {
     flex:1,
     justifyContent:'space-around',
-    width: 40, // Ajuste conforme necessário
-    height: 40, // Ajuste conforme necessário
-    resizeMode: 'contain', // Use 'contain' ou 'cover' conforme necessário
+    width: 40,
+    height: 40,
+    resizeMode: 'contain',
   },
 });

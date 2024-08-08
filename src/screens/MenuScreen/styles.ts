@@ -10,12 +10,14 @@ export const styles = StyleSheet.create({
 
     containerNavbar:{
         flex:1,
-        padding:20,
+        padding:10,
+        paddingRight: 20,
+        paddingLeft: 20,
         justifyContent:'space-between',
         width:'100%',
         alignItems:'flex-end',
         alignSelf:'center',
-        maxHeight:70,
+        maxHeight:75,
         flexDirection:'row',
     },
 
