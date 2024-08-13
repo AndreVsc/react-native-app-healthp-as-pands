@@ -4,11 +4,11 @@ import { View, Text, TouchableOpacity} from 'react-native';
 import { styles } from './styles';
 import { waterScreenProps } from './props';
 
-import { WeekInfo } from '../../../components/WeekInfo';
-import { WeekWater } from '../../../components/WeekWater';
+import { WeekInfo } from '../../components/WeekInfo';
+import { WeekWater } from '../../components/WeekWater';
 
-import { ButtonBack } from '../../../components/ButtonBack';
-import { BoxWater } from '../../../components/BoxWater';
+import { ButtonBack } from '../../components/ButtonBack';
+import { BoxWater } from '../../components/BoxWater';
 
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 

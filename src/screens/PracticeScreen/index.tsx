@@ -1,13 +1,13 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { View, Text, AppState } from 'react-native';
-import { ButtonBack } from '../../../components/ButtonBack';
+import { ButtonBack } from '../../components/ButtonBack';
 import { styles } from './styles';
 import { Timer } from './actions';
-import ControlButtons from '../../../components/ControlButtons';
-import AdditionalSettings from '../../../components/AdditionalSettings';
+import ControlButtons from '../../components/ControlButtons';
+import AdditionalSettings from '../../components/AdditionalSettings';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useFocusEffect } from '@react-navigation/native';
-import { PRARICE_ID } from '../../../constants/pratice';
+import { PRARICE_ID } from '../../constants/pratice';
 
 export function PracticeScreen({ navigation }: any) {
   const [time, setTime] = useState(0);

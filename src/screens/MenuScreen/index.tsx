@@ -15,7 +15,7 @@ export const MenuScreen: React.FC = ({ navigation }: any) => {
 
   return (
     <View style={styles.container}>
-      <Sidebar visible={sidebarVisible} onClose={() => setSidebarVisible(false)} />
+      <Sidebar visible={sidebarVisible} onClose={() => setSidebarVisible(false)}/>
       <View style={styles.containerNavbar}>
         <View style={styles.containerNavbarLeftItems}>
           <View style={styles.acountNavbarItems}>

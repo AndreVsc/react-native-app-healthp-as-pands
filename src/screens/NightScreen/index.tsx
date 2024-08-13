@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { View, Text } from 'react-native';
 
-import { ButtonBack } from '../../../components/ButtonBack';
-import { NightButtons } from '../../../components/NightButtons';
-import { BookList } from '../../../components/BookList';
-import { HourInfo } from '../../../components/HourInfo';
+import { ButtonBack } from '../../components/ButtonBack';
+import { NightButtons } from '../../components/NightButtons';
+import { BookList } from '../../components/BookList';
+import { HourInfo } from '../../components/HourInfo';
 import { styles } from './styles';
-import { LightInTheDark } from '../../../components/LightInTheDark';
+import { LightInTheDark } from '../../components/LightInTheDark';
 
 export const NightScreen = ({ navigation }: any) => {
   const [setting, setSetting] = useState<boolean>(true);

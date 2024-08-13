@@ -1,7 +1,7 @@
 import React from 'react';
 import { TouchableOpacity, View, Text } from 'react-native';
 import { Ionicons, Entypo, MaterialIcons, Feather } from '@expo/vector-icons';
-import { styles } from '../../screens/InsightScreens/PracticeScreen/styles';
+import { styles } from '../../screens/PracticeScreen/styles';
 
 interface ControlButtonsProps {
   isRunning: boolean;
