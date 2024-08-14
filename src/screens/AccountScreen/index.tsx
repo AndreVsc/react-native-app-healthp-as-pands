@@ -33,54 +33,56 @@ export function AccountScreen({ navigation }: any) {
       <ScrollView>
         <View style={styles.options}>
         <View style={styles.optionsItems}>
-          <Text style={styles.labelOpition}>about me</Text>
+          <Text style={styles.labelOpition}>account</Text>
           <CustomButton
-            iconName="linkedin-square"
-            iconColor="#5181c0"
+            iconName="envelope"
+            iconColor="#CC8069"
             text="Email"
+            iconSize={35}
             onPress={()=>{}}
             iconLibrary="FontAwesome" 
           />
           <CustomButton
-            iconName="linkedin-square"
-            iconColor="#5181c0"
-            text="Phone Number"
+            iconName="square-phone"
+            iconColor="#8BDC93"
+            text="Phone"
             onPress={()=>{}}
-            iconLibrary="FontAwesome" 
+            iconLibrary="FontAwesome6" 
           />
         </View>
         <View style={styles.optionsItems}>
-          <Text style={styles.labelOpition}>about me</Text>
+          <Text style={styles.labelOpition}>data</Text>
           <CustomButton
-            iconName="linkedin-square"
-            iconColor="#5181c0"
+            iconName="square-h"
+            iconColor="#D9D07D"
             text="Height"
             onPress={()=>{}}
-            iconLibrary="FontAwesome" 
+            iconLibrary="FontAwesome6" 
           />
           <CustomButton
-            iconName="linkedin-square"
-            iconColor="#5181c0"
+            iconName="weight-scale"
+            iconColor="#7E7DD9"
             text="Weight"
+            iconSize={33}
             onPress={()=>{}}
-            iconLibrary="FontAwesome" 
+            iconLibrary="FontAwesome6" 
           />
           <CustomButton
-            iconName="linkedin-square"
-            iconColor="#5181c0"
+            iconName="calendar"
+            iconColor="#C89A70"
             text="Age"
             onPress={()=>{}}
-            iconLibrary="FontAwesome" 
+            iconLibrary="Ionicons" 
           />
         </View>
         <View style={styles.optionsItems}>
-          <Text style={styles.labelOpition}>about me</Text>
+          <Text style={styles.labelOpition}>delete</Text>
           <CustomButton
-            iconName="linkedin-square"
-            iconColor="#5181c0"
+            iconName="square-xmark"
+            iconColor="#D66565"
             text="Delete"
             onPress={()=>{}}
-            iconLibrary="FontAwesome" 
+            iconLibrary="FontAwesome6" 
           />
         </View>
       </View>

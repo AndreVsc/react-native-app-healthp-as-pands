@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-const API_URL = 'http://192.168.2.106:5000';
+const API_URL = 'http://192.168.2.107:5000';
 
 export function useAuth() {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);

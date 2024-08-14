@@ -30,7 +30,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const signIn = async (email: string, password: string) => {
     try {
-      const response = await fetch(`http://192.168.2.106:5000/auth/login`, {
+      const response = await fetch(`http://192.168.2.107:5000/auth/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

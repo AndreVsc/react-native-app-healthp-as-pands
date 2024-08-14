@@ -1,5 +1,4 @@
-// ExerciseData.ts
-import exercises from './../../../assets/pratice.json'; // Ajuste o caminho conforme necessário
+import exercises from './../../../assets/pratice.json'; 
 
 export interface Exercise {
   id: number;

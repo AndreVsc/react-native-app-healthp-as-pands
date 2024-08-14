@@ -24,7 +24,7 @@ export const styles = StyleSheet.create({
     paddingTop:30,
   },
   options: {
-    padding: 16,
+    padding: 5,
     alignItems: 'center',
     width:'100%',
   },
@@ -46,4 +46,4 @@ export const styles = StyleSheet.create({
     borderRadius:10,
     overflow:'hidden',
   },
-});
+});69
