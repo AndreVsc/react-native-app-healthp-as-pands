@@ -5,10 +5,10 @@ import { buttonBackProps } from './props';
 
 import { AntDesign } from '@expo/vector-icons';
 
-export function ButtonBack({navigation}:buttonBackProps) {
+export function ButtonBack({navigation, color}:buttonBackProps) {
   return (
     <TouchableOpacity onPress={()=>{navigation.navigate('Menu')}}>
-        <AntDesign name="left" size={24} color="#ffffff" />
+        <AntDesign name="left" size={24} color={color? color :"#ffffff"} />
     </TouchableOpacity>
   );
 }

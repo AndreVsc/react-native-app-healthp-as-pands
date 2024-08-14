@@ -20,7 +20,7 @@ export const MenuScreen: React.FC = ({ navigation }: any) => {
         <View style={styles.containerNavbarLeftItems}>
           <View style={styles.acountNavbarItems}>
             <TouchableOpacity onPress={() => { navigation.navigate('Account') }}>
-              <FontAwesome6 name="user-large" size={20} color="#617CA6" />
+              <FontAwesome6 name="user-large" size={27} color="#617CA6" />
             </TouchableOpacity>
           </View>
           <Text style={styles.textNavbarItems}>Insights</Text>

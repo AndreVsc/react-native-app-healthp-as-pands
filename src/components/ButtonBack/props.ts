@@ -1,3 +1,4 @@
 export interface buttonBackProps{
-    navigation:any
+    navigation:any;
+    color?: string;
 }

@@ -7,6 +7,7 @@ import { SidebarProps } from './props';
 import { styles } from './styles';
 import { handleEmailPress, handleGitHubPress, handleLinkedInPress, handleVersionPress } from './actions';
 import { useAuth } from '../../contexts/AuthContext';
+import CustomButton from '../Buttons';
 
 export const Sidebar: React.FC<SidebarProps> = ({ visible, onClose }) => {
   const { signOut } = useAuth();
@@ -34,9 +35,6 @@ export const Sidebar: React.FC<SidebarProps> = ({ visible, onClose }) => {
 
   const handleLogout = async () => {
     await signOut();
-    // Navegação para a tela de login após o logout
-    // Certifique-se de que a navegação esteja disponível aqui
-    // No contexto atual, você pode não ter acesso direto à navegação
   };
 
   return (
@@ -51,29 +49,45 @@ export const Sidebar: React.FC<SidebarProps> = ({ visible, onClose }) => {
         </View>
         <View style={styles.options}>
           <Text style={styles.labelOpition}>about me</Text>
-          <TouchableOpacity style={styles.option} onPress={handleLinkedInPress}>
-            <FontAwesome name="linkedin-square" size={40} color="#5181c0" />
-            <Text style={styles.text}>Linkedin</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.option} onPress={handleGitHubPress}>
-            <FontAwesome name="github-square" size={40} color="#434343" />
-            <Text style={styles.text}>Github</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.option} onPress={handleEmailPress}>
-            <FontAwesome6 name="square-envelope" size={40} color="#CC8069" />
-            <Text style={styles.text}>Email</Text>
-          </TouchableOpacity>
+          <CustomButton
+            iconName="linkedin-square"
+            iconColor="#5181c0"
+            text="Linkedin"
+            onPress={handleLinkedInPress}
+            iconLibrary="FontAwesome" 
+          />
+          <CustomButton
+            iconName="github-square"
+            iconColor="#434343"
+            text="Github"
+            onPress={handleGitHubPress}
+            iconLibrary="FontAwesome" 
+          />
+          <CustomButton
+            iconName="square-envelope"
+            iconColor="#CC8069"
+            text="Email"
+            onPress={handleEmailPress}
+            iconLibrary="FontAwesome6" 
+          />
         </View>
         <View style={styles.options}>
           <Text style={styles.labelOpition}>logout</Text>
-          <TouchableOpacity style={styles.option} onPress={handleVersionPress}>
-            <FontAwesome6 name="square-font-awesome" size={40} color="#D9D07D" />
-            <Text style={styles.text}>Version</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={styles.option} onPress={handleLogout}>
-            <FontAwesome6 name="square-xmark" size={40} color="#D66565" />
-            <Text style={styles.text}>Logout</Text>
-          </TouchableOpacity>
+          <CustomButton
+            iconName="square-font-awesome"
+            iconColor="#D9D07D"
+            text="Version"
+            onPress={handleVersionPress}
+            iconLibrary="FontAwesome6" 
+          />
+          <CustomButton
+            iconName="square-xmark"
+            iconColor="#D66565"
+            text="Logout"
+            onPress={handleLogout}
+            iconLibrary="FontAwesome6" 
+          />
+
         </View>
         <View style={styles.fotter}>
           <Text style={styles.copy}>Desenvolvido por André Victor Soares Castro.</Text>
