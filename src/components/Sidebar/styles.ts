@@ -41,7 +41,7 @@ export const styles = StyleSheet.create({
   },
   labelOpition: {
     alignSelf: 'flex-start',
-    marginLeft: 40,
+    marginLeft: 20,
     fontWeight: 'bold',
     color: '#a4a4a4',
     marginBottom: 8,

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, TextInput, Button, Text, StyleSheet } from 'react-native';
+import { View, TextInput, Button, Text } from 'react-native';
 import { useAuth } from '../../hooks/useAuth';
 import { styles } from './styles';
 
@@ -12,40 +12,21 @@ const RegisterScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
   const [dataNasc, setDataNasc] = useState<string>('');
   const [idTipoDeUsuario, setIdTipoDeUsuario] = useState<number>(1); // Ajuste conforme necessário
   const [error, setError] = useState<string | null>(null);
-  const { signIn } = useAuth();
+  const { signUp } = useAuth();
 
-  const registerUser = async () => {
-    if (password !== confirmPassword) {
-      setError("Passwords do not match");
-      return;
-    }
-
-    try {
-      // Substitua <seu_ip_local> pelo IP real da sua máquina
-      const response = await fetch('http://192.168.2.106:5000/auth/register', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email, senha: password, nome, peso, dataNasc, idTipoDeUsuario }),
-      });
-
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.error || 'Registration failed');
-      }
-
-      // Após o registro, faça login automaticamente
-      await signIn(email, password);
-      navigation.navigate('Login');
-    } catch (error) {
-      if (error instanceof Error) {
-        setError(error.message);
-      } else {
-        setError("An unknown error occurred");
-      }
-    }
-  }
+  const handleRegister = () => {
+    signUp({
+      confirmPassword,
+      email,
+      password,
+      nome,
+      peso,
+      dataNasc,
+      idTipoDeUsuario,
+      navigation,
+      setError,
+    });
+  };
 
   return (
     <View style={styles.container}>
@@ -99,7 +80,7 @@ const RegisterScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
       />
 
       {error && <Text style={styles.error}>{error}</Text>}
-      <Button title="Register" onPress={registerUser} />
+      <Button title="Register" onPress={handleRegister} />
     </View>
   );
 };
