@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { View, TextInput, Button, Text } from 'react-native';
-import { useAuth } from '../../hooks/useAuth';
+import { View, Text, TextInput, Button, Platform } from 'react-native';
+import DateTimePicker from '@react-native-community/datetimepicker';
+import { useAuth } from '../../contexts/AuthContext';
 import { styles } from './styles';
 
 const RegisterScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
@@ -10,6 +11,8 @@ const RegisterScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
   const [nome, setNome] = useState<string>('');
   const [peso, setPeso] = useState<string>('');
   const [dataNasc, setDataNasc] = useState<string>('');
+  const [date, setDate] = useState<Date>(new Date());
+  const [showDatePicker, setShowDatePicker] = useState<boolean>(false);
   const [idTipoDeUsuario, setIdTipoDeUsuario] = useState<number>(1); // Ajuste conforme necessário
   const [error, setError] = useState<string | null>(null);
   const { signUp } = useAuth();
@@ -26,6 +29,18 @@ const RegisterScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
       navigation,
       setError,
     });
+  };
+
+  const handleDateChange = (event: any, selectedDate?: Date) => {
+    const currentDate = selectedDate || date;
+    setShowDatePicker(Platform.OS === 'ios');
+    setDate(currentDate);
+    setDataNasc(currentDate.toISOString().split('T')[0]); // Format as YYYY-MM-DD
+    console.log(dataNasc);
+  };
+
+  const showDatePickerDialog = () => {
+    setShowDatePicker(true);
   };
 
   return (
@@ -47,12 +62,19 @@ const RegisterScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
         keyboardType="numeric"
       />
 
-      <Text style={styles.label}>Data de nascimento (YYYY-MM-DD):</Text>
-      <TextInput 
-        style={styles.input}  
-        value={dataNasc} 
-        onChangeText={setDataNasc} 
+      <Text style={styles.label}>Data de nascimento:</Text>
+      <TextInput
+        style={styles.input}
+        value={dataNasc}
+        onFocus={showDatePickerDialog}
+        editable={false} 
       />
+        <DateTimePicker
+          value={date}
+          mode="date"
+          display="calendar"
+          onChange={handleDateChange}
+        />
 
       <Text style={styles.label}>Email:</Text>
       <TextInput 

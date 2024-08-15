@@ -19,10 +19,23 @@ export const styles = StyleSheet.create({
         shadowOpacity: 0.1,
         shadowRadius: 5,
         elevation: 4,
+        overflow:'hidden',
       },
-  text: {
-    marginLeft: 10,
-    fontSize: 16,
-    color: '#000',
-  },
+      containerText: {
+        flex:1,
+        flexDirection:'row',
+        justifyContent:'space-between',
+        paddingRight:25,
+      },
+      text: {
+        fontSize: 14,
+        color: '#000',
+      },
+      text2:{
+        fontSize: 14,
+        alignItems:'center',
+        alignSelf:'center',
+        color:'#aaa',
+
+      }
 });

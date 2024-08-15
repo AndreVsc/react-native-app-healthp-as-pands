@@ -3,7 +3,7 @@ import { View, ActivityIndicator } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { AuthRoutes } from './auth.routes';
 import { StackRoutes } from './stack.routes';
-import { useAuth } from '../hooks/useAuth';
+import { useAuth } from '../contexts/AuthContext';
 
 export function Routes() {
   const { isAuthenticated, loading } = useAuth();

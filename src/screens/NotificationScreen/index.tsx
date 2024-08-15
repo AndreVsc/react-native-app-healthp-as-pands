@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Button, StyleSheet, Platform, Linking } from 'react-native';
+import { View, Text, Button, Platform, Linking } from 'react-native';
 import { styles } from './styles';
 
 export function NotificationSettingsScreen() {

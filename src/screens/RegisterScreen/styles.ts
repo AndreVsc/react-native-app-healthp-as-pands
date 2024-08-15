@@ -29,5 +29,20 @@ export const styles = StyleSheet.create({
         marginBottom: 8,
         marginTop: 16,
       },
+      containerPicker: {
+        flex: 1,
+        justifyContent: 'center',
+        padding: 16,
+      },
+      labelPicker: {
+        marginBottom: 8,
+        fontSize: 16,
+      },
+      inputPicker: {
+        height: 40,
+        borderColor: 'gray',
+        borderWidth: 1,
+        paddingHorizontal: 10,
+      },
   });
   
