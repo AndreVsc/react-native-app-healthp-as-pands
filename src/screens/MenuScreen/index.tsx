@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { View, Text, TouchableOpacity, Alert } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { Ionicons, FontAwesome6 } from '@expo/vector-icons';
+import * as Notifications from 'expo-notifications';
 import { styles } from './styles';
 import { InsightSelection } from '../../components/InsightSelection';
 import { Sidebar } from '../../components/Sidebar';
@@ -13,9 +14,43 @@ export const MenuScreen: React.FC = ({ navigation }: any) => {
     setSidebarVisible(!sidebarVisible);
   };
 
+  const checkAndRequestNotificationPermissions = async () => {
+    const { granted, ios } = await Notifications.getPermissionsAsync();
+
+    // For iOS: Check provisional authorization
+    if (ios?.status === Notifications.IosAuthorizationStatus.PROVISIONAL) {
+      return;
+    }
+
+    if (granted) {
+      return;
+    }
+
+    const { status } = await Notifications.requestPermissionsAsync({
+      ios: {
+        allowAlert: true,
+        allowBadge: true,
+        allowSound: true,
+        allowAnnouncements: true,
+      },
+    });
+
+    if (status !== 'granted') {
+      Alert.alert(
+        'Permissões de Notificação',
+        'Este aplicativo precisa de permissões de notificação para funcionar corretamente. Por favor, habilite as permissões nas configurações.',
+        [{ text: 'OK', onPress: () => navigation.navigate('NotificationSettings') }]
+      );
+    }
+  };
+
+  useEffect(() => {
+    checkAndRequestNotificationPermissions();
+  }, []);
+
   return (
     <View style={styles.container}>
-      <Sidebar visible={sidebarVisible} onClose={() => setSidebarVisible(false)}/>
+      <Sidebar visible={sidebarVisible} onClose={() => setSidebarVisible(false)} />
       <View style={styles.containerNavbar}>
         <View style={styles.containerNavbarLeftItems}>
           <View style={styles.acountNavbarItems}>
@@ -32,7 +67,7 @@ export const MenuScreen: React.FC = ({ navigation }: any) => {
         </View>
       </View>
       <View style={styles.containerInsightSelection}>
-        <InsightSelection navigation={navigation}/>
+        <InsightSelection navigation={navigation} />
       </View>
       <StatusBar style="dark" />
     </View>

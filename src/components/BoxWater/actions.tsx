@@ -22,6 +22,16 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
   return (
     <View style={[styles.container, { width, height }]}>
       <Svg width={width} height={height}>
+        {/* Linha de trás */}
+        <Rect
+          x="0"
+          y="0"
+          width={width}
+          height={height}
+          fill={backgroundColor} // Cor de fundo
+          rx={width / 2}
+          ry={width / 2}
+        />
         <Rect
           x="0"
           y={height - progressHeight}

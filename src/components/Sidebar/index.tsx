@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, Dimensions } from 'react-native';
+import { View, Text, TouchableOpacity, Dimensions, ScrollView } from 'react-native';
 import Animated, { useSharedValue, useAnimatedStyle, withSpring } from 'react-native-reanimated';
 import { PanGestureHandler, State, GestureHandlerGestureEvent } from 'react-native-gesture-handler';
 import { FontAwesome, FontAwesome6, Ionicons } from '@expo/vector-icons';
@@ -47,6 +47,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ visible, onClose }) => {
             <View></View>
           </TouchableOpacity>
         </View>
+        <ScrollView>
         <View style={styles.options}>
           <Text style={styles.labelOpition}>about me</Text>
           <CustomButton
@@ -89,6 +90,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ visible, onClose }) => {
           />
 
         </View>
+        </ScrollView>
         <View style={styles.fotter}>
           <Text style={styles.copy}>Desenvolvido por André Victor Soares Castro.</Text>
           <Text style={styles.copy}>Copyright © 2024 - Todos os direitos reservados.</Text>

@@ -8,7 +8,7 @@ import CustomButton from '../../components/Buttons';
 import { useAuth } from '../../contexts/AuthContext';
 
 export function AccountScreen({ navigation }: any) {
-  const { user, loading, deleteUser, signOut } = useAuth();
+  const { user, loading, deleteUser, signOut , water } = useAuth();
 
   function Navbar() {
     return (
@@ -66,7 +66,7 @@ export function AccountScreen({ navigation }: any) {
       <View style={styles.navbar}>
         <Navbar />
       </View>
-      <ScrollView>
+        <ScrollView style={{height:'100%'}}>
         <View style={styles.options}>
           <View style={styles.optionsItems}>
             <Text style={styles.labelOpition}>Account</Text>
@@ -74,7 +74,7 @@ export function AccountScreen({ navigation }: any) {
               iconName="envelope"
               iconColor="#CC8069"
               text="Email"
-              text2={user?.email || 'Not provided'}
+              text2={user?.email}
               iconSize={35}
               onPress={() => {}}
               iconLibrary="FontAwesome"
@@ -86,6 +86,7 @@ export function AccountScreen({ navigation }: any) {
               iconName="hand-holding-water"
               iconColor="#6AA2D7"
               text="Cup size"
+              text2={water? `${water.tamanhoCopo}ml`: 'Not provided'}
               iconSize={33}
               onPress={() => {}}
               iconLibrary="FontAwesome5"
@@ -95,7 +96,7 @@ export function AccountScreen({ navigation }: any) {
               iconColor="#7E7DD9"
               text="Weight"
               iconSize={33}
-              text2={user?.peso || 'Not provided'}
+              text2={user? user.peso : 'Not provided'}
               onPress={() => {}}
               iconLibrary="FontAwesome6"
             />
@@ -118,8 +119,8 @@ export function AccountScreen({ navigation }: any) {
               iconLibrary="FontAwesome6"
             />
           </View>
-        </View>
-      </ScrollView>
+          </View>
+        </ScrollView>
     </View>
   );
 }

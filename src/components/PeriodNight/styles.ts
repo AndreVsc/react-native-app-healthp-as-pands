@@ -26,4 +26,9 @@ export const styles = StyleSheet.create({
     fontSize: 12,
     color: '#AAAB7D',
   },
+  
+  picker: {
+    width: '100%', // Ajusta a largura do picker para 100% do container
+
+  },
 });

@@ -9,7 +9,7 @@ interface CustomButtonProps {
   iconColor?: string;
   text: string;
   text2?: string | number;
-  onPress: () => void | Promise<number> ;
+  onPress: () => void | Promise<number> | Promise<void> ;
   iconLibrary: 'FontAwesome' | 'Ionicons' | 'FontAwesome5' | 'FontAwesome6';
   containerStyle?: ViewStyle;
   textStyle?: TextStyle;

@@ -46,12 +46,14 @@
     [
       "expo-notifications",
       {
-        "icon": "./assets/Panda.png",
+        "icon": "./local/assets/notification-icon.png",
+        "color": "#ffffff",
+        "defaultChannel": "default",
         "sounds": [
-          "./assets/notification.wav"
+          "./local/assets/notification-sound.wav",
+          "./local/assets/notification-sound-other.wav"
         ]
       }
     ]
-    
   ]
 }

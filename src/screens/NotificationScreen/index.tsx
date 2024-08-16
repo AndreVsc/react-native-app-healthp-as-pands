@@ -1,23 +1,18 @@
 import React from 'react';
-import { View, Text, Button, Platform, Linking } from 'react-native';
+import { View, Text, Button, Platform, Linking, Alert } from 'react-native';
 import { styles } from './styles';
 
 export function NotificationSettingsScreen() {
   const openNotificationSettings = async () => {
-    if (Platform.OS === 'android') {
-      // Abre as configurações do aplicativo para Android
-      try {
+    try {
+      if (Platform.OS === 'android') {
         await Linking.openSettings();
-      } catch (error) {
-        console.error('Failed to open settings:', error);
-      }
-    } else {
-      // Abre as configurações do aplicativo para iOS
-      try {
+      } else {
         await Linking.openSettings();
-      } catch (error) {
-        console.error('Failed to open settings:', error);
       }
+    } catch (error) {
+      console.error('Failed to open settings:', error);
+      Alert.alert('Erro', 'Não foi possível abrir as configurações.');
     }
   };
 

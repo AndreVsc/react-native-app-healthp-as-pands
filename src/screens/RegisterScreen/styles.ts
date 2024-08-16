@@ -28,7 +28,7 @@ export const styles = StyleSheet.create({
         fontSize: 16,
         marginBottom: 8,
         marginTop: 16,
-      },
+      },  
       containerPicker: {
         flex: 1,
         justifyContent: 'center',

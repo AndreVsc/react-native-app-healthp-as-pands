@@ -64,8 +64,6 @@ const RegisterScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
 
       <Text style={styles.label}>Data de nascimento:</Text>
       <TextInput
-        style={styles.input}
-        value={dataNasc}
         onFocus={showDatePickerDialog}
         editable={false} 
       />
